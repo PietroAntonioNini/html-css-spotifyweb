@@ -20,12 +20,15 @@ header {
 }
 
 main {
+    height: calc(100vh - 90px);
     flex-grow: 1;
     position: relative;
 
     margin-left: 230px;
     overflow-y: auto;
     font-family: sans-serif;
+
+    background-color: #141922;
 }
 
 /* Side-bar */
@@ -154,12 +157,7 @@ main {
 /* Main-View */
 
 .main-view {
-    height: 100%;
-    /* test */
-
     padding: 100px 20px 50px;
-
-    background-color: #141922;
 }
 
 .main-view h2:not(.recently-played h2) {
