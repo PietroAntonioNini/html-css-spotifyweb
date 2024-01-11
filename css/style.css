@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* reset */
+
+/* Container principale */
+
+.big-container {
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    width: 230px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+main {
+    flex-grow: 1;
+    position: relative;
+
+    margin-left: 230px;
+    overflow-y: auto;
+    font-family: sans-serif;
+}
+
+/* Side-bar */
+
+.side-bar {
+    height: 100vh;
+    /* test */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 230px;
+
+    background-color: #000000;
+}
+
+.top .logo {
+    padding: 20px;
+    padding-right: 70px;
+}
+
+.top .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding-bottom: 25px;
+}
+
+.menu a {
+    height: 20px;
+    border: 1px solid red;   
+    /* test */
+
+    padding-left: 20px;
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding-left: 20px;
+}
+
+.playlist h2 {
+    height: 20px;
+    border: 1px solid red;   
+    /* test */
+
+}
+
+.playlist-name:nth-child(2) {
+    height: 40px;
+    border: 1px solid red;   
+    /* test */
+
+}
+
+.playlist-name {
+    height: 20px;
+    border: 1px solid red;   
+    /* test */
+
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 0 20px;
+}
+
+.bottom .install {
+    height: 20px;
+    border: 1px solid red;   
+    /* test */
+
+}
+
+.bottom .user {
+    height: 20px;
+    border: 1px solid red;   
+    /* test */
+}
+
+
+
+/* Main */
+
+
+/* Top-View */
+
+.top-view {
+    height: 80px;
+    /* test */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    width: calc(100% - 230px);
+    padding-right: 10px;
+    
+    background-color: #080b1299;
+}
+
+.top-view button {
+    padding: 10px 40px;
+
+    font-weight: bold;
+
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+    background-color: transparent;
+}
+
+
+
+/* Main-View */
+
+.main-view h2:not(.recently-played h2) {
+    margin-bottom: 10px;
+
+    color: #FFFFFF;
+}
+
+.suggestion {
+    font-size: 12px;
+    font-weight: bold;
+
+    color: #7D7F84;
+}
+
+
+/* Main-Menu */
+
+.main-view {
+    height: 100%;
+    /* test */
+
+    padding: 100px 20px 50px;
+
+    background-color: #141922;
+}
+
+.main-menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    margin-bottom: 35px;
+}
+
+.main-menu ul li {
+    list-style-type: none;
+}
+
+.main-menu ul li a {
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #7D7F84;
+}
+
+/* Recently-Played */
+
+.recently-played h2 {
+    color: #FFFFFF;
+}
+
+.albums {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.album {
+    height: 300px;
+    border: 1px solid blue;
+    /* test */
+
+    width: calc((100% / 6) - (15px * 5 / 6));
+}
+
+
+/* Creato-per-John-Doe */
