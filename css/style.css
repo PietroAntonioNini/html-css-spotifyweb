@@ -31,7 +31,7 @@ main {
 /* Side-bar */
 
 .side-bar {
-    height: 100vh;
+    height: calc(100vh - 90px);
     /* test */
 
     display: flex;
@@ -98,6 +98,7 @@ main {
     flex-direction: column;
     gap: 10px;
 
+    margin-bottom: 10px;
     padding: 0 20px;
 }
 
@@ -152,6 +153,15 @@ main {
 
 /* Main-View */
 
+.main-view {
+    height: 100%;
+    /* test */
+
+    padding: 100px 20px 50px;
+
+    background-color: #141922;
+}
+
 .main-view h2:not(.recently-played h2) {
     margin-bottom: 10px;
 
@@ -168,18 +178,14 @@ main {
 
 /* Main-Menu */
 
-.main-view {
-    height: 100%;
-    /* test */
-
-    padding: 100px 20px 50px;
-
-    background-color: #141922;
+.main-menu {
+    max-width: 600px;
+    margin: auto;
 }
 
 .main-menu ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
 
     margin-bottom: 35px;
@@ -220,4 +226,99 @@ main {
 }
 
 
-/* Creato-per-John-Doe */
+
+/* Footer player */
+
+.player {
+    height: 90px;
+    /* test */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+
+    width: 100vw;
+
+    background-color: #282828;
+}
+
+.box {
+    height: 40px;
+    border: 1px solid red;
+    /* test */
+
+    width: calc(100vw / 3);
+}
+
+.now-playing,
+.song-info,
+.song-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.song-info * {
+    border: 1px solid green;
+    /* test */
+    height: 40px;
+}
+
+.song-image {
+    width: 40px;
+    margin-right: 7px;
+}
+
+.song-detail {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+
+    padding: 5px 0;
+}
+
+.song-buttons {
+    border: 1px solid green;
+    /* test */
+    height: 40px;
+
+    margin-left: 10px;
+}
+
+.save {
+    width: 20px;
+}
+
+.folder {
+    width: 20px;
+}
+
+.player-controls {
+    border: 1px solid red;
+    /* test */
+    height: 70px;
+}
+
+.controls-buttons {
+    height: 40px;
+    border: 1px solid blue;
+    /* test */
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.controls-buttons * {
+    border: 1px solid yellow;
+    width: 30px;
+    /* test */
+}
+
+.control-line {
+    height: 30px;
+    border: 1px solid blue;
+    /* test */
+}
