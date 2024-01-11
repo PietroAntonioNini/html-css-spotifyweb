@@ -183,7 +183,8 @@ main {
 
 .main-menu ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 
     margin-bottom: 35px;
@@ -191,7 +192,34 @@ main {
 
 .main-menu ul li {
     list-style-type: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #141922;
 }
+
+.main-menu ul li:hover {
+    border-bottom: 2px solid #ADFF2F;
+    position: relative;
+}
+
+.main-menu ul li:hover::after {
+    content: ' ';
+    text-decoration: none;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    right: 0;
+    border-bottom: solid 2px #141922;
+  }
+
+  .main-menu ul li:hover::before {
+    content: ' ';
+    text-decoration: none;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    left: 0;
+    border-bottom: solid 2px #141922;
+  }
 
 .main-menu ul li a {
     font-size: 12px;
@@ -209,6 +237,7 @@ main {
 .albums {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 15px;
 
     margin-top: 30px;
@@ -221,6 +250,7 @@ main {
     /* test */
 
     width: calc((100% / 6) - (15px * 5 / 6));
+    min-width: 150px;
 }
 
 
@@ -319,4 +349,31 @@ main {
     height: 30px;
     border: 1px solid blue;
     /* test */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.burger-menu {
+    border: 1px solid violet;
+    width: 30px;
+    /* test */
+}
+
+.display {
+    border: 1px solid violet;
+    width: 30px;
+    /* test */
+}
+
+.volume {
+    border: 1px solid violet;
+    width: 150px;
+    /* test */
+
+    margin-right: 10px;
 }
