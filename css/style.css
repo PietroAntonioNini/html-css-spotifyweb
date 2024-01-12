@@ -229,6 +229,7 @@ main {
 
 .top-view button {
     padding: 10px 40px;
+    transition: all 0.5s;
 
     font-weight: bold;
 
@@ -236,6 +237,14 @@ main {
     border-radius: 50px;
     color: white;
     background-color: transparent;
+}
+
+.top-view button:hover {
+
+    transform: scale(1.1);
+    margin-right: 15px;
+    box-shadow: 0 8px 12px 0 rgb(0, 0, 0);
+    background-color: #141922;
 }
 
 
@@ -331,12 +340,48 @@ main {
 }
 
 .album {
-    height: 300px;
-    border: 1px solid blue;
-    /* test */
-
     width: calc((100% / 6) - (15px * 5 / 6));
     min-width: 150px;
+    transition: all 0.5s;
+
+    text-decoration: none;
+}
+
+.album:hover {
+    transform: scale(1.1);
+}
+
+.album-image img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 10px;
+
+    font-weight: bold;
+    text-align: center;
+    line-height: 16px;
+}
+
+.album-name {
+    padding: 0 5px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.album-autor {
+    font-size: 12px;
+    color: #7D7F84;
+}
+
+.artisti-più-popolari .album-image img { 
+    border-radius: 100%;
 }
 
 
@@ -413,8 +458,20 @@ main {
     display: flex;
     gap: 10px;
     margin-left: 10px;
+    transition: all 0.5s;
+}
 
+.song-buttons a {
+    text-decoration: none;
     color: #878787;
+}
+
+.song-buttons .fa-heart:hover {
+    color: red;
+}
+
+.song-buttons .fa-folder:hover {
+    color: #FFFFFF;
 }
 
 .player-controls {
@@ -475,7 +532,10 @@ main {
     margin-left: 5px;
 
     font-size: 14px;
+}
 
+.buttons a {
+    text-decoration: none;
     color: #FFFFFF;
 }
 
@@ -518,6 +578,14 @@ main {
         width: calc((100% / 4) - (15px * 3 / 4));
         min-width: 125px;
     }
+
+    #progress-bar {
+        width: 70%;
+      }
+      
+    #progress {
+        width: 30%;
+      }
 }
 
 /* TABLET VIEW */
@@ -526,6 +594,11 @@ main {
     .album {
         width: calc((100% / 2) - (15px * 1 / 2));
     }
+
+    .song-detail {
+        width: 90px;
+        padding-right: 5px;
+    }
     
     .song-buttons {
         display: flex;
@@ -533,6 +606,10 @@ main {
         gap: 5px;
     
         margin-left: 10px;
+    }
+
+    .control-line {
+        font-size: 10px;
     }
 }
 
@@ -560,9 +637,11 @@ main {
     }
 
     .menu a {
-        padding: 0;
+        padding:10px 0;
 
         text-align: center;
+
+        color: #FFFFFF;
     }
 
     .top-view {
@@ -575,20 +654,32 @@ main {
     }
 
     .bottom {
-        padding: 8px;
+        padding: 0;
         text-align: center;
     }
     
     .bottom .install {
-        padding: 0px;
+        justify-content: center;
+        padding: 5px 0;
 
         font-size: 12px;
+        border: none;
+        border-left: 2px solid #000000;
         color: #FFFFFF;
+    }
+
+    .bottom .install:hover {
+        border-left: 2px solid #ADFF2F;
     }
     
     .bottom .user {
+        justify-content: center;
         font-size: 25px;
         color: #FFFFFF;
+    }
+
+    .bottom .user:hover {
+        margin: 0;
     }
 
     .song-detail {
