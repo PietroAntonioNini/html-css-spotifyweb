@@ -710,11 +710,11 @@ main {
         margin-right: 10px;
     }
 
-    .controls-buttons {
-        gap: 12px;
-    }
-
     .control-line {
         font-size: 10px;
+    }
+
+    .buttons {
+        gap: 10px;
     }
 }
