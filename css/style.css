@@ -696,6 +696,10 @@ main {
         margin: 0;
     }
 
+    .main-menu ul {
+        margin-bottom: 20px;
+    }
+
     .song-detail {
         width: 70px;
         padding-right: 5px;
