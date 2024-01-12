@@ -6,6 +6,9 @@
     <title>Spotify Web App</title>
 
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <div class="big-container">
@@ -17,28 +20,49 @@
                     </div>
     
                     <div class="menu">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
+                        <a href=""><i class="fa-solid fa-house"></i>Home</a>
+                        <a href=""><i class="fa-solid fa-magnifying-glass"></i>Cerca</a>
+                        <a href=""><i class="fa-solid fa-lines-leaning"></i>La tua libreria</a>
                     </div>
     
                     <div class="playlist">
-                        <h2></h2>
-                        <div class="playlist-name"></div>
-                        <div class="playlist-name"></div>
-                        <div class="playlist-name"></div>
-                        <div class="playlist-name"></div>
-                        <div class="playlist-name"></div>
-                        <div class="playlist-name"></div>
-                        <div class="playlist-name"></div>
-                        <div class="playlist-name"></div>
+                        <h2>playlist</h2>
+                        <a href="" class="add-playlist">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Crea Playlist</span>
+                        </a>
+                        <a href="" class="playlist-name">Nome Playlist</a>
+                        <a href="" class="playlist-name">Nome Playlist</a>
+                        <a href="" class="playlist-name">Nome Playlist</a>
+                        <a href="" class="playlist-name">Nome Playlist</a>
+                        <a href="" class="playlist-name">Nome Playlist</a>
+                        <a href="" class="playlist-name">Nome Playlist</a>
+                        <a href="" class="playlist-name">Nome Playlist</a>
                     </div>
                 </div>
     
                 <div class="bottom">
-                    <div class="install"></div>
-                    <hr>
-                    <div class="user"></div>
+                    <a href="" class="install"><i class="fa-regular fa-circle-down"></i>Installa app</a>
+                    <a href="" class="user"><i class="fa-solid fa-circle-user"></i>John Doe</a>
+                </div>
+            </nav>
+
+            <nav class="side-bar-mobile">
+                <div class="top">
+                    <div class="logo">
+                        <img src="./img/logo-small.svg" alt="Spotify">
+                    </div>
+    
+                    <div class="menu">
+                        <a href=""><i class="fa-solid fa-house"></i></a>
+                        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href=""><i class="fa-solid fa-lines-leaning fa-flip-horizontal"></i></a>
+                    </div>
+                </div>
+    
+                <div class="bottom">
+                    <div class="install"><i class="fa-regular fa-circle-down"></i></div>
+                    <div class="user"><i class="fa-solid fa-circle-user"></i></div>
                 </div>
             </nav>
         </header>
@@ -102,37 +126,54 @@
     <footer class="player">
 
         <div class="box now-playing">
+
             <div class="song-info">
-                <div class="song-image"></div>
+                <div class="song-image">
+                    <img src="./img/sinister.jpeg" alt="">
+                </div>
+
                 <div class="song-detail">
-                    <h3></h3>
-                    <span></span>
+                    <h3>Sinister</h3>
+                    <span>Brano Nome</span>
                 </div>
             </div>
 
             <div class="song-buttons">
-                <i class="save"></i>
-                <i class="folder"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-folder"></i>
             </div>
             
         </div>
 
         <div class="box player-controls">
             <div class="controls-buttons">
-                <div></div>
-                <div></div>
-                <div class="play-stop"></div>
-                <div></div>
-                <div></div>
+                <div><i class="fa-solid fa-shuffle"></i></div>
+                <div><i class="fa-solid fa-backward-step"></i></div>
+                <div><i class="fa-regular fa-circle-play"></i></div>
+                <div><i class="fa-solid fa-forward-step"></i></div>
+                <div><i class="fa-solid fa-rotate-right"></i></div>
             </div>
 
-            <div class="control-line"></div>
+            <div class="control-line">
+                <span>0:25</span>
+                <div id="progress-bar">
+                    <div id="progress"></div>
+                </div>
+                <span>4:35</span>
+            </div>
         </div>
 
         <div class="box buttons">
-            <div class="burger-menu"></div>
-            <div class="display"></div>
-            <div class="volume"></div>
+            <div class="more-option"><i class="fa-solid fa-bars"></i></div>
+
+            <div class="display"><i class="fa-solid fa-display"></i></div>
+
+            <div class="volume">
+                <i class="fa-solid fa-volume-high"></i>
+                <div id="volume-bar">
+                    <div id="volume"></div>
+                </div>
+            </div>
         </div>
 
     </footer>
