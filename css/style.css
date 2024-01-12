@@ -341,7 +341,6 @@ main {
 
 .album {
     width: calc((100% / 6) - (15px * 5 / 6));
-    min-width: 150px;
     transition: all 0.5s;
 
     text-decoration: none;
@@ -456,7 +455,7 @@ main {
 
 .song-buttons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     margin-left: 10px;
     transition: all 0.5s;
 }
@@ -527,7 +526,7 @@ main {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 
     margin-left: 5px;
 
@@ -540,7 +539,7 @@ main {
 }
 
 .volume {
-    width: 120px;
+    width: 150px;
 }
 
 .volume {
@@ -567,7 +566,19 @@ main {
     background: #c1c1c1;
   }
 
+  @media screen and (max-width: 1200px) {
+    .album {
+        width: calc((100% / 5) - (15px * 4 / 5));
+    }
 
+    #progress-bar {
+        width: 70%;
+      }
+      
+    #progress {
+        width: 30%;
+      }
+  }
 
 
 
@@ -576,7 +587,6 @@ main {
 @media screen and (max-width: 992px){
     .album {
         width: calc((100% / 4) - (15px * 3 / 4));
-        min-width: 125px;
     }
 
     #progress-bar {
@@ -610,6 +620,10 @@ main {
 
     .control-line {
         font-size: 10px;
+    }
+    
+    .volume {
+        width: 120px;
     }
 }
 
