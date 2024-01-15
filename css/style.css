@@ -43,39 +43,56 @@ main {
 /* Side-bar */
 
 .side-bar {
-    height: calc(100vh - 90px);
-    /* test */
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 
     width: 230px;
+    height: calc(100vh - 90px);
+    overflow-y: auto;
 
     background-color: #000000;
 }
 
-.top .logo {
+/* Nascondi scroolbar per Chrome, Safari e Opera */
+.side-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+.logo {
+    position: fixed;
+    top: 0;
+
+    width: 230px;
     padding: 20px;
     padding-right: 70px;
+
+    box-shadow: 0px 20px 20px #000000;
+    background-color: #000000;
 }
 
 .top .menu {
     display: flex;
     flex-direction: column;
 
+    margin-top: 100px;
     margin-bottom: 30px;
 
     font-weight: bold;
 }
 
 .menu a {
+    display: flex;
+    align-items: center;
+
     padding:10px 0 10px 20px;
     text-decoration: none;
-    vertical-align: middle;
 
     border-left: 4px solid #000000;
     color: #878787;
+
+    transition: all 0.5s;
 }
 
 .menu a:hover {
@@ -83,18 +100,16 @@ main {
     color: #FFFFFF;
 }
 
-.menu i {
+.menu img {
     width: 30px;
     margin-right: 5px;
-    vertical-align: middle;
-
-    font-size: 25px;
 }
 
 .playlist {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 100px;
 
     font-weight: bold;
 }
@@ -119,6 +134,8 @@ main {
     text-decoration: none;
 
     border-left: 4px solid #000000;
+
+    transition: all 0.5s;
 }
 
 .add-playlist:hover {
@@ -152,6 +169,8 @@ main {
 
     border-left: 4px solid #000000;
     color: #878787;
+
+    transition: all 0.5s;
 }
 
 .playlist-name:hover {
@@ -172,6 +191,7 @@ main {
 
 .bottom .install {
     display: flex;
+    align-items: center;
     gap: 10px;
 
     padding-bottom: 15px;
@@ -180,6 +200,11 @@ main {
     border-bottom: 1px solid #717171;
     color: #5a5a5a;
 
+    transition: all 0.5s;
+}
+
+.bottom .install img {
+    width: 20px;
 }
 
 .bottom .install:hover {
@@ -193,17 +218,19 @@ main {
 
     font-size: 20px;
     text-decoration: none;
-    color: #FFFFFF;
+    color: #878787;
+
+    transition: all 0.3s;
 }
 
 .bottom .user:hover {
     scale: 1.1;
     margin-left: 10px;
+    color: #FFFFFF;
 }
 
-.bottom .user i {
-    font-size: 30px;
-    color: #5a5a5a;
+.bottom .user img {
+    width: 30px;
 }
 
 
@@ -229,7 +256,6 @@ main {
 
 .top-view button {
     padding: 10px 40px;
-    transition: all 0.5s;
 
     font-weight: bold;
 
@@ -237,6 +263,8 @@ main {
     border-radius: 50px;
     color: white;
     background-color: transparent;
+
+    transition: all 0.5s;
 }
 
 .top-view button:hover {
@@ -347,12 +375,37 @@ main {
 }
 
 .album:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.album-image {
+    position: relative;
+    line-height: 0;
 }
 
 .album-image img {
     width: 100%;
     object-fit: contain;
+}
+
+.album-image i {
+    display: none;
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding-top: calc(50% - 2.5vw);
+
+    font-size: 5vw;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #00000080;
+}
+
+.album:hover i {
+    display: block;
 }
 
 .album-info {
@@ -383,6 +436,9 @@ main {
     border-radius: 100%;
 }
 
+.artisti-più-popolari .album-image i { 
+    border-radius: 100%;
+}
 
 
 
@@ -463,13 +519,15 @@ main {
 .song-buttons a {
     text-decoration: none;
     color: #878787;
+
+    transition: all 0.4s;
 }
 
-.song-buttons .fa-heart:hover {
+.song-buttons a:nth-child(1):hover {
     color: red;
 }
 
-.song-buttons .fa-folder:hover {
+.song-buttons a:hover {
     color: #FFFFFF;
 }
 
@@ -589,6 +647,11 @@ main {
         width: calc((100% / 4) - (15px * 3 / 4));
     }
 
+    .album-image i {
+        padding-top: calc(50% - 3vw);
+        font-size: 6vw;
+    }
+
     #progress-bar {
         width: 70%;
       }
@@ -603,6 +666,11 @@ main {
 @media screen and (max-width: 768px){
     .album {
         width: calc((100% / 2) - (15px * 1 / 2));
+    }
+
+    .album-image i {
+        padding-top: calc(50% - 5vw);
+        font-size: 10vw;
     }
 
     .song-detail {
@@ -639,7 +707,6 @@ main {
 
     .side-bar-mobile {
         height: calc(100vh - 90px);
-    /* test */
 
         display: flex;
         flex-direction: column;
@@ -650,11 +717,24 @@ main {
         background-color: #000000;
     }
 
+    .logo {
+        position: fixed;
+        top: 0;
+    
+        width: 50px;
+        padding: 5px;
+    
+        box-shadow: 0px 20px 20px #000000;
+        background-color: #000000;
+    }
+
+    .top .menu {
+        margin-top: 70px;
+    }
+
     .menu a {
+        justify-content: center;
         padding:10px 0;
-
-        text-align: center;
-
         color: #FFFFFF;
     }
 
@@ -698,6 +778,11 @@ main {
 
     .main-menu ul {
         margin-bottom: 20px;
+    }
+
+    .album-image i {
+        padding-top: calc(50% - 5vw);
+        font-size: 10vw;
     }
 
     .song-detail {
